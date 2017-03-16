@@ -1,0 +1,42 @@
+{
+  "name": "upgrade_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "influx": "=5.0.4"
+  },
+  "babel": {
+    "sourceMaps": false,
+    "presets": [
+      "es2017"
+    ],
+    "plugins": [
+      "transform-runtime",
+      "transform-es2015-modules-commonjs",
+      "transform-class-properties",
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ],
+    "ignore": [
+      "node_modules"
+    ]
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitry Chirkin <josser@nixsolutions.com>",
+  "license": "MIT"
+}
